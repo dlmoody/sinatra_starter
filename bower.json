@@ -1,21 +1,22 @@
 {
   "name": "idea_box",
   "version": "0.0.0",
+  "homepage": "https://github.com/dlmoody/sinatra_starter",
   "authors": [
     "David Moody <moody.david@gmail.com>"
   ],
   "description": "Starter app for sinatra",
-  "directory": "~/public/bower_components",
   "main": "app.rb",
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
+    "public/bower_components",
     "test",
     "tests"
   ],
-  dependencies: {
-    bootstrap-css: '>= 3.3.4'
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap-css": "~3.3.4"
   }
 }

@@ -12,6 +12,9 @@
 
 /public/bower_components
 
+.DS_Store
+public/.DS_Store
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
