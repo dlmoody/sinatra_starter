@@ -43,7 +43,7 @@ class Idea
 
 
     def self.all
-        raw_ideas.map do |data|
+        raw_ideas.collect do |data|
             new(data[:title], data[:description])
         end
     end

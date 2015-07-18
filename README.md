@@ -1,3 +1,3 @@
 ## Sinatra Starter App
 
-this is just a starter 
+This is just a starter 
