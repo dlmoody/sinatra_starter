@@ -1,7 +1,45 @@
+<h2>Idea Box</h2>
+<form method="post" action="/">
+  <input type="text" name="title" />
+  <br />
+  <textarea name="description"></textarea>
+  <br />
+  <input type="submit" />
+</form>
+<h3>Existing Ideas</h3>
 
-    <h2>Idea Box</h2>
-    <form method="post" action="/">
-      <input type="text" name="title" /><br />
-      <textarea name="description" ></textarea><br />
-        <input type="submit" />
-    </form>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% ideas.each_with_index do |idea, id| %>
+      <tr>
+        <td>
+          <%= id %>
+        </td>
+        <td>
+          <%= idea.title %>
+        </td>
+        <td>
+          <%= idea.description %>
+        </td>
+        <td>
+          <span>
+          <a class="btn btn-primary pull-left" href="/<%= id %>/edit">Edit</a>
+          <form action="/<%= id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input class="btn btn-primary" type="submit" value="Delete">
+          </form>
+        </span>
+        </td>
+      </tr>
+      <% end %>
+
+  </tbody>
+</table>
